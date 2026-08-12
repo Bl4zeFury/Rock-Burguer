@@ -46,7 +46,17 @@
                         <div class="descricao">Ultra refrescante e com gás, essencial para recuperar as energias depois de um solo destruidor de 10 minutos.</div>
                     </td>
                     <td class="preco">R$ 6,00</td>
-                    <td><a href="https://wa.me" class="btn-pedir" target="_blank">Pedir</a></td>
+                    <td>
+                        <button type="button" class="btn-pedir" onclick="adicionarAoCarrinho({
+                            id: 'lagrimas-vocalista',
+                            nome: 'Lágrimas do Vocalista',
+                            descricao: 'Ultra refrescante e com gás, essencial para recuperar as energias depois de um solo destruidor de 10 minutos.',
+                            preco: 6.00,
+                            imagem: 'baterista.jpg'
+                        })">
+                            Adicionar
+                        </button>
+                    </td>
                 </tr>
                 <tr>
                     <td><img src="vocalista.jpg" alt="Soda de Frutas" class="foto-hamburguer"></td>
@@ -55,7 +65,17 @@
                         <div class="descricao">Uma soda artesanal de frutas vermelhas bem doce, perfeita para quem adora drama, holofotes e notas agudas.</div>
                     </td>
                     <td class="preco">R$ 12,00</td>
-                    <td><a href="https://wa.me" class="btn-pedir" target="_blank">Pedir</a></td>
+                    <td>
+                        <button type="button" class="btn-pedir" onclick="adicionarAoCarrinho({
+                            id: 'soda-frutas',
+                            nome: 'Soda de Frutas Vermelhas',
+                            descricao: 'Uma soda artesanal de frutas vermelhas bem doce, perfeita para quem adora drama, holofotes e notas agudas.',
+                            preco: 12.00,
+                            imagem: 'vocalista.jpg'
+                        })">
+                            Adicionar
+                        </button>
+                    </td>
                 </tr>
                 <tr>
                     <td><img src="guitarrista.jpg" alt="Suco do Virtuoso" class="foto-hamburguer"></td>
@@ -64,7 +84,17 @@
                         <div class="descricao">Suco natural de laranja e morango, feito com precisão técnica milimétrica e sem errar uma única nota.</div>
                     </td>
                     <td class="preco">R$ 10,00</td>
-                    <td><a href="https://wa.me" class="btn-pedir" target="_blank">Pedir</a></td>
+                    <td>
+                        <button type="button" class="btn-pedir" onclick="adicionarAoCarrinho({
+                            id: 'suco-virtuoso',
+                            nome: 'Suco do Virtuoso',
+                            descricao: 'Suco natural de laranja e morango, feito com precisão técnica milimétrica e sem errar uma única nota.',
+                            preco: 10.00,
+                            imagem: 'guitarrista.jpg'
+                        })">
+                            Adicionar
+                        </button>
+                    </td>
                 </tr>
                 <tr>
                     <td><img src="baixista.jpg" alt="Gelada do Baixista" class="foto-hamburguer"></td>
@@ -73,7 +103,17 @@
                         <div class="descricao">Uma cerveja escura e encorpada que sustenta o ritmo da noite no fundo, mesmo que ninguém repare nela.</div>
                     </td>
                     <td class="preco">R$ 18,00</td>
-                    <td><a href="https://wa.me" class="btn-pedir" target="_blank">Pedir</a></td>
+                    <td>
+                        <button type="button" class="btn-pedir" onclick="adicionarAoCarrinho({
+                            id: 'gelada-baixista',
+                            nome: 'Gelada do Baixista Esquecido',
+                            descricao: 'Uma cerveja escura e encorpada que sustenta o ritmo da noite no fundo, mesmo que ninguém repare nela.',
+                            preco: 18.00,
+                            imagem: 'baixista.jpg'
+                        })">
+                            Adicionar
+                        </button>
+                    </td>
                 </tr>
                 <tr>
                     <td><img src="roadie.jpg" alt="Combustível do Roadie" class="foto-hamburguer"></td>
@@ -82,7 +122,17 @@
                         <div class="descricao">Dose dupla de cafeína pura e taurina para quem carrega caixas pesadas de som e passa a noite montando o palco.</div>
                     </td>
                     <td class="preco">R$ 14,00</td>
-                    <td><a href="https://wa.me" class="btn-pedir" target="_blank">Pedir</a></td>
+                    <td>
+                        <button type="button" class="btn-pedir" onclick="adicionarAoCarrinho({
+                            id: 'combustivel-roadie',
+                            nome: 'Combustível do Roadie',
+                            descricao: 'Dose dupla de cafeína pura e taurina para quem carrega caixas pesadas de som e passa a noite montando o palco.',
+                            preco: 14.00,
+                            imagem: 'roadie.jpg'
+                        })">
+                            Adicionar
+                        </button>
+                    </td>
                 </tr>
             </tbody>
         </table>
@@ -94,5 +144,7 @@
             <p>&copy; 2026 Empresa Clube Das Lendas. Todos os direitos reservados.</p>
         </footer>
     </div>
+
+    <script src="Carrinho.js"></script>
 </body>
 </html>
