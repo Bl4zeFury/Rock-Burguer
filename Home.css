@@ -1,0 +1,299 @@
+/* ==========================================
+   1. RESET E REGRAS GERAIS DA HOME
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body {
+    min-height: 100vh;
+    height: 100%;
+    margin: 0;
+}
+
+body.page-home {
+    background-image: url('padrao.avif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    background-attachment: fixed; 
+    color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    min-height: 100vh;
+    width: 100%; 
+    padding: 40px 20px;
+}
+
+.page-home .container {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 40px 30px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 550px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    position: relative;
+}
+
+.page-home .container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* ==========================================
+   2. COMPONENTES VISUAIS DA HOME
+   ========================================== */
+.page-home .perfil-foto {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid #cc0000;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(204, 0, 0, 0.3);
+    object-fit: cover;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 4px 15px rgba(204, 0, 0, 0.3); }
+    50% { box-shadow: 0 4px 25px rgba(204, 0, 0, 0.6); }
+}
+
+.page-home h1 {
+    font-size: 2.8rem;
+    margin: 15px 0 8px 0;
+    color: #cc0000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 900;
+}
+
+.page-home .subtitle {
+    font-size: 1.1rem;
+    color: #666666;
+    margin-bottom: 35px;
+    line-height: 1.5;
+}
+
+/* ==========================================
+   3. BOTÃO UNIFICADO NO TOPO (DROPDOWN)
+   ========================================== */
+.page-home .topo-acoes-dropdown {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: inline-block;
+    z-index: 20;
+}
+
+.page-home .btn-topo-principal {
+    background-color: #111111;
+    color: #ffeb3b;
+    padding: 10px 18px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    border: 2px solid #cc0000;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.page-home .btn-topo-principal:hover,
+.page-home .topo-acoes-dropdown:focus-within .btn-topo-principal {
+    background-color: #cc0000;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+
+.page-home .dropdown-conteudo {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #ffffff;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    overflow: hidden;
+    border: 2px solid #cc0000;
+    margin-top: 5px;
+}
+
+.page-home .btn-dropdown-item {
+    color: #333333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+    text-align: left;
+    transition: all 0.2s ease-in-out;
+}
+
+.page-home .btn-dropdown-item:hover {
+    background-color: #fff0f0;
+    color: #cc0000;
+    padding-left: 20px;
+}
+
+.page-home .topo-acoes-dropdown:hover .dropdown-conteudo,
+.page-home .topo-acoes-dropdown:focus-within .dropdown-conteudo {
+    display: block;
+}
+
+/* ==========================================
+   4. LINKS DE REDES SOCIAIS E HOVERS
+   ========================================== */
+.page-home .links-redes {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 35px;
+}
+
+.page-home .btn-rede {
+    background-color: #111111;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 16px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid transparent;
+}
+
+.page-home .btn-pedido-principal {
+    background-color: #cc0000;
+    color: #ffffff;
+    font-size: 1.15rem;
+    border: 2px solid #990000;
+}
+
+.page-home .btn-pedido-principal:hover {
+    background-color: #990000;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(204, 0, 0, 0.4);
+}
+
+.page-home .btn-instagram:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(204, 0, 0, 0.3);
+}
+
+.page-home .btn-whatsapp {
+    border: 2px solid #25d366;
+}
+
+.page-home .btn-whatsapp:hover {
+    background-color: #25d366;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(37, 211, 102, 0.4);
+}
+
+.page-home .btn-tiktok:hover {
+    background-color: #000000;
+    color: #00f2fe;
+    text-shadow: -1px -1px 0 #fe0979, 1px 1px 0 #00f2fe;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 242, 254, 0.3);
+}
+
+.page-home .btn-facebook {
+    border: 2px solid #1877f2;
+}
+
+.page-home .btn-facebook:hover {
+    background-color: #1877f2;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(24, 119, 242, 0.4);
+}
+
+/* ==========================================
+   5. RODAPÉ E RESPONSIVIDADE
+   ========================================== */
+.page-home footer {
+    margin-top: 30px;
+    font-size: 14px;
+    border-top: 2px solid #dddddd;
+    padding-top: 20px;
+}
+
+.page-home footer a {
+    color: #cc0000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+}
+
+.page-home footer a:hover {
+    color: #990000;
+    text-decoration: underline;
+}
+
+.page-home footer p {
+    font-size: 0.85rem;
+    color: #777777;
+    margin-top: 15px;
+}
+
+@media (max-width: 600px) {
+    body.page-home {
+        padding: 10px;
+    }
+    
+    .page-home .container {
+        padding: 50px 15px 30px 15px;
+    }
+    
+    .page-home .topo-acoes-dropdown {
+        top: 12px;
+        right: 12px;
+    }
+    
+    .page-home .btn-topo-principal {
+        padding: 8px 12px;
+        font-size: 0.75rem;
+    }
+    
+    .page-home .perfil-foto {
+        width: 100px;
+        height: 100px;
+        border-width: 3px;
+    }
+    
+    .page-home h1 {
+        font-size: 2rem;
+    }
+    
+    .page-home .subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 25px;
+    }
+    
+    .page-home .links-redes {
+        gap: 12px;
+        margin-bottom: 25px;
+    }
+    
+    .page-home .btn-rede {
+        padding: 14px 15px;
+        font-size: 1rem;
+    }
+}
