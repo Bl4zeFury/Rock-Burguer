@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio das Lendas - Rock Burger</title>
+    <link rel="stylesheet" href="Cardapio-Hamburguer-H1.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="topo-acoes-dropdown">
+            <button type="button" class="btn-topo-principal">Minha Conta ▼</button>
+            <div class="dropdown-conteudo">
+                <a href="carrinho.html" class="btn-dropdown-item">🛒 Ver Carrinho</a>
+            </div>
+        </div>
+
+        <nav>
+            <a href="Home.html">Home</a>
+            <a href="Cardapio-Hamburguer-H1.html">Cardápio H1</a>
+            <a href="Cardapio-Bebidas.html">Bebidas</a>
+            <a href="Redes Sociais.html">Redes Sociais</a>
+        </nav>
+
+        <h1>Rock Burger</h1>
+        <p class="subtitle">Escolha sua lenda e faça o pedido!</p>
+
+        <h2>🍔 Cardápio Principal</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Foto</th>
+                    <th>Hambúrguer</th>
+                    <th>Preço</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="pentakill.jpg" alt="Pentakill Burger" class="foto-hamburguer">
+                    </td>
+                    <td>
+                        <div class="nome-hamburguer">Pentakill Burger</div>
+                        <div class="descricao">
+                            Blend de 200g, avalanche de cheddar, bacon crocante e molho barbecue de cerveja preta no pão brioche.
+                        </div>
+                    </td>
+                    <td class="preco">R$ 44,90</td>
+                    <td>
+                        <button type="button" class="btn-pedir" onclick="adicionarAoCarrinho({
+                            id: 'pentakill',
+                            nome: 'Pentakill Burger',
+                            descricao: 'Blend de 200g, avalanche de cheddar, bacon crocante e molho barbecue de cerveja preta no pão brioche.',
+                            preco: 44.90,
+                            imagem: 'pentakill.jpg'
+                        })">
+                            Adicionar
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <img src="metallica.jpg" alt="Metallica Burger" class="foto-hamburguer">
+                    </td>
+                    <td>
+                        <div class="nome-hamburguer">Metallica Burger</div>
+                        <div class="descricao">
+                            Blend duplo smash de 300g, queijo provolone, pepperoni defumado, rúcula e maionese de alho negro no pão australiano.
+                        </div>
+                    </td>
+                    <td class="preco">R$ 48,90</td>
+                    <td>
+                        <button type="button" class="btn-pedir" onclick="adicionarAoCarrinho({
+                            id: 'metallica',
+                            nome: 'Metallica Burger',
+                            descricao: 'Blend duplo smash de 300g, queijo provolone, pepperoni defumado, rúcula e maionese de alho negro no pão australiano.',
+                            preco: 48.90,
+                            imagem: 'metallica.jpg'
+                        })">
+                            Adicionar
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <img src="ironmaiden.jpg" alt="Iron Maiden Burger" class="foto-hamburguer">
+                    </td>
+                    <td>
+                        <div class="nome-hamburguer">Iron Maiden Burger</div>
+                        <div class="descricao">
+                            Blend de 180g, cheddar inglês, cebola roxa na cerveja IPA, picles, bacon e molho de mostarda escura e mel.
+                        </div>
+                    </td>
+                    <td class="preco">R$ 45,90</td>
+                    <td>
+                        <button type="button" class="btn-pedir" onclick="adicionarAoCarrinho({
+                            id: 'ironmaiden',
+                            nome: 'Iron Maiden Burger',
+                            descricao: 'Blend de 180g, cheddar inglês, cebola roxa na cerveja IPA, picles, bacon e molho de mostarda escura e mel.',
+                            preco: 45.90,
+                            imagem: 'ironmaiden.jpg'
+                        })">
+                            Adicionar
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <img src="slipknot.jpg" alt="Slipknot Burger" class="foto-hamburguer">
+                    </td>
+                    <td>
+                        <div class="nome-hamburguer">Slipknot Burger</div>
+                        <div class="descricao">
+                            Blend de costela de 180g, muçarela, bacon, anéis de cebola e maionese chipotle picante.
+                        </div>
+                    </td>
+                    <td class="preco">R$ 46,90</td>
+                    <td>
+                        <button type="button" class="btn-pedir" onclick="adicionarAoCarrinho({
+                            id: 'slipknot',
+                            nome: 'Slipknot Burger',
+                            descricao: 'Blend de costela de 180g, muçarela, bacon, anéis de cebola e maionese chipotle picante.',
+                            preco: 46.90,
+                            imagem: 'slipknot.jpg'
+                        })">
+                            Adicionar
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <img src="guns.jpg" alt="Guns N Roses Burger" class="foto-hamburguer">
+                    </td>
+                    <td>
+                        <div class="nome-hamburguer">Guns N' Roses Burger</div>
+                        <div class="descricao">
+                            Blend de 180g, queijo prato, bacon caramelizado no mel, geleia de pimenta defumada e rúcula.
+                        </div>
+                    </td>
+                    <td class="preco">R$ 43,90</td>
+                    <td>
+                        <button type="button" class="btn-pedir" onclick="adicionarAoCarrinho({
+                            id: 'guns',
+                            nome: 'Guns N Roses Burger',
+                            descricao: 'Blend de 180g, queijo prato, bacon caramelizado no mel, geleia de pimenta defumada e rúcula.',
+                            preco: 43.90,
+                            imagem: 'guns.jpg'
+                        })">
+                            Adicionar
+                        </button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <img src="blacksabbath.jpg" alt="Black Sabbath Burger" class="foto-hamburguer">
+                    </td>
+                    <td>
+                        <div class="nome-hamburguer">Black Sabbath Burger</div>
+                        <div class="descricao">
+                            Blend de costela angus de 180g, queijo gorgonzola, cebolas roxas ao vinho tinto e bacon no pão australiano preto.
+                        </div>
+                    </td>
+                    <td class="preco">R$ 49,90</td>
+                    <td>
+                        <button type="button" class="btn-pedir" onclick="adicionarAoCarrinho({
+                            id: 'blacksabbath',
+                            nome: 'Black Sabbath Burger',
+                            descricao: 'Blend de costela angus de 180g, queijo gorgonzola, cebolas roxas ao vinho tinto e bacon no pão australiano preto.',
+                            preco: 49.90,
+                            imagem: 'blacksabbath.jpg'
+                        })">
+                            Adicionar
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <footer>
+            <a href="javascript:history.back()">Voltar para a página anterior</a> |
+            <a href="Home.html">Ir para Home</a>
+            <p>&copy; 2026 Empresa Clube Das Lendas. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <script src="Carrinho.js"></script>
+</body>
+</html>
